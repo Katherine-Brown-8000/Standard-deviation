@@ -1,11 +1,11 @@
 import math
-data = [7, 8, 4]
+data = [-1, 1]
 
-def Find_standard_deviation(data):
+def find_standard_deviation(data):
     mean = sum(data) / len(data)
-    squared_diff = [(x - mean)** 2 for x in data]
-    varianc = sum(squared_diff) / len(data)
-    return math.sqrt(varianc)
+    squared_diff = [(x - mean) ** 2 for x in data]
+    variance = sum(squared_diff) / len(data) # Not subtracting by 1 here makes it for the population sd
+    return math.sqrt(variance)
 
-sd = Find_standard_deviation(data)
+sd = find_standard_deviation(data)
 print(sd)
